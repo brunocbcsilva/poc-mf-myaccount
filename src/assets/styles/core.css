@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --layout-header-height: calc(16px * 4);
+    --layout-sidebar-nav-width: calc(16px * 14);
+  }
+
+  html {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .title-page {
+    @apply text-4xl font-bold text-green-500;
+  }
+
+  .content-section {
+    @apply flex flex-col gap-8 p-8;
+  }
+
+  .content-card {
+    @apply rounded-lg border bg-gray-50 p-8 shadow;
+
+    &--body {
+      @apply flex flex-wrap justify-center gap-4;
+    }
+  }
+}
+
+#app {
+  @apply relative h-screen w-screen overflow-y-auto overflow-x-hidden;
+}
